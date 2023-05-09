@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Etienne Dufour - Portfolio</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<header>
+		<h1 class="nomHeader">Etienne Dufour - Portfolio</h1>
+		<div>
+			<a href="a_propos.html" class="navigation">à propos</a>
+			<a href="index.html" class="navigation navigation-active">productions</a>
+		</div>
+	</header>
+
+	<main>
+		<div class="buttons">
+			<p class="btn typeDeProjet" onclick="onFilterButtonClic(['perso'])">perso</p>
+			<p class="btn typeDeProjet" onclick="onFilterButtonClic(['scolaire'])">scolaire</p>
+			<p class="btn typeDeProjet starter" onclick="onFilterButtonClic(['toutProjet'])">Tout contexte</p>
+		</div>
+		<div class="buttons">
+			<p class="btn typeDeMission" onclick="onFilterButtonClic(['dev'])">developpement</p>
+			<p class="btn typeDeMission" onclick="onFilterButtonClic(['gd'])">game design</p>
+			<p class="btn typeDeMission" onclick="onFilterButtonClic(['sound'])">sound design</p>
+			<p class="btn typeDeMission" onclick="onFilterButtonClic(['plastic'])">production plastique</p>
+			<p class="btn typeDeMission starter" onclick="onFilterButtonClic(['toutesMission'])">Toutes missions</p>
+		</div>
+
+		<div class="objects">
+
+
+			<a href="projet-notFound.html" class="box toutProjet toutesMission perso plastic">								<! -- Croquis -->
+				<img class="box-img" src="Data/vignettes/croquis.jpeg">
+				<div class="box-star"><img src="Data/star.png"></div>
+				<div class="box-text">
+					<h1>Dessin d'observation</h1>
+					<p></p>
+				</div>
+			</a>
+
+			<a href="projet-notFound.html" class="box toutProjet toutesMission scolaire plastic">								<! -- Fuseaux -->
+				<img class="box-img" src="Data/vignettes/fuseau.png">
+				<div class="box-text">
+					<h1>Fuseaux horaires</h1>
+					<p>vidéo animée</p>
+				</div>
+			</a>
+			<a href="projet-notFound.html" class="box toutProjet toutesMission perso gd plastic">								<! -- Growing -->
+				<img class="box-img" src="Data/vignettes/growing.jpg">
+				<div class="box-text">
+					<h1>Growing</h1>
+					<p>jeu de plateau</p>
+				</div>
+			</a>
+			<a href="projet-notFound.html" class="box toutProjet toutesMission perso dev gd plastic">								<! -- hector -->
+				<img class="box-img" src="Data/vignettes/hector.jpg">
+				<div class="box-text">
+					<h1>Save Hector the dinosaur</h1>
+					<p>jeu mobile</p>
+				</div>
+			</a>
+			<a href="projet-notFound.html" class="box toutProjet toutesMission scolaire dev gd sound">								<! -- Olympus -->
+				<img class="box-img" src="Data/vignettes/olympus.jpg">
+				<div class="box-text">
+					<h1>Olympus Race</h1>
+					<p>jeu en VR</p>
+				</div>
+			</a>
+			<a href="projet-notFound.html" class="box toutProjet toutesMission perso dev gd sound">								<! -- Pious -->
+				<img class="box-img" src="Data/vignettes/pious.jpg">
+				<div class="box-text">
+					<h1>Pious in the cages</h1>
+					<p>jeu vidéo</p>
+				</div>
+			</a>
+			<a href="projet-notFound.html" class="box toutProjet toutesMission scolaire dev plastic">								<! -- Poisson -->
+				<img class="box-img" src="Data/vignettes/poisson.jpg">
+				<div class="box-text">
+					<h1>Design génératif</h1>
+					<p>programme Processing</p>
+				</div>
+			</a>
+			<a href="projet-notFound.html" class="box toutProjet toutesMission perso dev gd">								<! -- Shapes -->
+				<img class="box-img" src="Data/vignettes/shapes.jpg">
+				<div class="box-text">
+					<h1>Shapes fight</h1>
+					<p>jeu vidéo</p>
+				</div>
+			</a>
+			<a href="projet-notFound.html" class="box toutProjet toutesMission scolaire dev gd">								<! -- spaceComunism -->
+				<img class="box-img" src="Data/vignettes/spaceComunism.jpg">
+				<div class="box-text">
+					<h1>Space comunism</h1>
+					<p>jeu vidéo & makey makey</p>
+				</div>
+			</a>
+			<a href="projet-notFound.html" class="box toutProjet toutesMission perso plastic">								<! -- Illu -->
+				<img class="box-img" src="Data/vignettes/illus.png">
+				<div class="box-text">
+					<h1>Illustrations digitales</h1>
+					<p></p>
+				</div>
+			</a>
+			<a href="projet-notFound.html" class="box toutProjet toutesMission perso dev gd plastic">								<! -- City of Ashareen -->
+				<img class="box-img" src="Data/vignettes/platform.png">
+				<div class="box-text">
+					<h1>City of Ashareen</h1>
+					<p>jeu vidéo</p>
+				</div>
+			</a>
+			<a href="projet-notFound.html" class="box toutProjet toutesMission perso dev gd">								<! -- Splitted -->
+				<img class="box-img" src="Data/vignettes/splitted.png">
+				<div class="box-text">
+					<h1>Splitted</h1>
+					<p>jeu vidéo</p>
+				</div>
+			</a>
+			<a href="projet-notFound.html" class="box toutProjet toutesMission perso dev gd plastic">								<! -- Artisan Meurtrier -->
+				<img class="box-img" src="Data/vignettes/artisan.png">
+				<div class="box-text">
+					<h1>Artisan meurtrier</h1>
+					<p>jeu vidéo</p>
+				</div>
+			</a>
+		</div>
+	</main>
+
+	<script src="script.js"></script>
+</body>
+</html>

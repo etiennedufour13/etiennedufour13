@@ -1,0 +1,222 @@
+﻿*{
+	padding:0;	/* enlève toutes les marges internes des éléments  */
+	margin:0;	/* enlève toutes les marges externes des éléments */
+	/*box-sizing: border-box;*/
+}
+body{
+	margin-top:70px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-family: "Montserrat", sans-serif;
+	background-color: white;
+}
+h1{
+	font-weight: 400;
+}
+p{
+	font-weight: 200;
+}
+/*--------------------------------------------------------------------------------------*/
+@keyframes slideInUp{
+	from{
+		transform: translateY(50px);
+	}
+	to{
+		transform: translateY(0);
+	}
+}
+
+/*--------------------------------------------------------------------------------------*/
+header {
+	background-color: #FAF5EB;
+	padding: 5px;
+	padding-left: 25px;
+	top: 0;
+	position: fixed;
+	width: 100%;
+	min-height: 40px;
+	z-index: 2; /* permet de passer par dessus les autres éléments*/
+
+	display: flex;
+    align-items: center; /* centrés en height */
+	justify-content: space-between; /* placés à l'exteme sur le width*/
+}
+.nomHeader {
+	float: left;
+	height: 100%;
+	align-items: center;
+}
+.navigation {
+	float: right;
+  	margin-right: 35px;
+	display: flex;
+	justify-content: flex-end;
+
+	color:black;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+.navigation:hover{
+	transform: translateX(-3px);
+	text-decoration: underline;
+}
+.navigation-active{
+	color:#ED6E40;
+}
+/*--------------------------------------------------------------------------------------*/
+main{
+	width: 90%;
+	max-width: 1000px;
+	margin: 0 auto;
+	flex-wrap: wrap;
+}
+.buttons{
+	display: flex;
+	justify-content: center;
+}
+.btn{
+	border:none;
+	outline:none;
+	margin-bottom: 20px;
+	padding: 12px 16px;
+	background-color: transparent;
+	cursor: pointer;
+	margin: 0 10px;
+
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+
+	transition: 0.3s ease 0s;
+}
+.btn:hover{
+	text-decoration: underline;
+	transform: translateY(-8px);
+}
+
+.starter{
+	color: #ED6E40;
+}
+/*--------------------------------------------------------------------------------------*/
+.objects{
+	margin-top:20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* dispose les box vers la gauche */
+}
+.box{
+	flex-basis: calc(100% / 3 - 20px);
+
+	color: #fff;
+	background-color: black;
+
+	margin: 10px;
+	padding-top: calc(100% / 3 - 20px);
+
+	/*border-radius: 4px;*/ /* bord arrondi */
+	box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, .20);
+
+	position: relative;
+	overflow: hidden;
+
+	transition: transform 0.5s;
+
+	display:none; /* nécéssaire au JS */
+}
+.box:hover{
+	transform: translateY(-5px);
+}
+
+.box-text{
+    position: absolute;
+	width:100%;
+	height:100%;
+	top: 0;
+    left: 0;
+
+	color: rgba(0, 0, 0, 0);
+	transition: color 0.4s;
+
+	display: flex;
+	align-items: center; /* centrés en height */
+	justify-content: center; /* placés à l'exteme sur le width*/
+	flex-direction: column; /* éléments en colone*/
+}
+.box:hover .box-text{
+	animation: slideInUp 0.7s;
+	color: rgba(255, 255, 255, 1);
+}
+
+.box-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	height: 100%;
+
+	filter: contrast(110%);
+
+	transition: opacity 0.4s;
+}
+.box:hover .box-img{
+	opacity: 0.5;
+}
+
+.box-star{
+	position: absolute;
+	margin:10%;
+	top: 0;
+	right: 0;
+	width:10%;
+	height:10%;
+
+	display:flex;
+	justify-content:center;
+
+	opacity: 0;
+	transition: opacity 0.7s;
+	transition: transform 1s;
+}
+.box:hover .box-star{
+
+	transform: rotate(144deg);
+	opacity: 1;
+}
+
+.show{
+	display:block;
+}
+
+/*--------------------------------------------------------------------------------------*/
+@media screen and (max-width:660px){
+	header {
+		justify-content: start; /* placés à l'exteme sur le width*/
+		align-items: flex-start; /* les alignes à gauche*/
+		flex-direction: column; /* range les uns en dessous des autres*/
+		padding-left: 20px;
+	}
+	.navigation {
+		margin-top: 5px;
+	}
+
+	.box{
+	flex-basis: calc(100% / 2 - 20px);
+	padding-top: calc(100% / 2 - 20px);
+	}
+}
+
+@media screen and (max-width:460px){
+	.nomHeader h1 {
+		font-size: 1.5em;
+	}
+	
+	.objects{
+	    justify-content: center; /* dispose les box vers la gauche */
+	}
+	.box{
+		flex-basis: 100%;
+		padding-top: 100%;
+	}
+}
